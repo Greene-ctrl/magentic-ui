@@ -1,3 +1,4 @@
+import os
 from typing import Any, ClassVar, Dict, List, Literal, Optional, Union
 
 from autogen_core import ComponentModel
@@ -39,14 +40,18 @@ class ModelClientConfigs(BaseModel):
     default_client_config: ClassVar[Dict[str, Any]] = {
         "provider": "OpenAIChatCompletionClient",
         "config": {
-            "model": "gpt-4.1-2025-04-14",
+            "model": "alias-large",
+            "base_url": "https://api.helmholtz-blablador.fz-juelich.de/v1",
+            "api_key": os.environ.get("BLABLADOR_API_KEY"),
         },
         "max_retries": 10,
     }
     default_action_guard_config: ClassVar[Dict[str, Any]] = {
         "provider": "OpenAIChatCompletionClient",
         "config": {
-            "model": "gpt-4.1-nano-2025-04-14",
+            "model": "alias-fast",
+            "base_url": "https://api.helmholtz-blablador.fz-juelich.de/v1",
+            "api_key": os.environ.get("BLABLADOR_API_KEY"),
         },
         "max_retries": 10,
     }
