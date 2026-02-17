@@ -192,6 +192,15 @@ async def health_check():
     }
 
 
+@app.get("/health")
+async def root_health_check():
+    """Root health check endpoint for Hugging Face"""
+    return {
+        "status": True,
+        "message": "Service is healthy",
+    }
+
+
 # Mount static file directories
 app.mount("/api", api)
 app.mount(

@@ -1,3 +1,13 @@
+---
+title: Maxun
+emoji: 🤖
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+app_port: 7860
+---
+
 <div align="center">
 <img src="docs/img/magui-readme-logo.svg" alt="Magentic-UI Logo">
 

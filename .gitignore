@@ -211,3 +211,7 @@ venv.bak/
 # Task centric memory related db and logs
 **/memory_bank/
 **/pagelogs/
+
+# Hugging Face deployment artifacts
+upload_to_hf.py
+server.log
